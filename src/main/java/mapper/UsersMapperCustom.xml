@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="mapper.UsersMapperCustom">
+
+    <!--
+    parameterType：为了查询条件扩展方便建议使用包装的pojo类型
+    resultType：使用扩展类，为了系统 扩展维护方便
+     -->
+    <select id="checkLogin" parameterType="Map" resultType="Map">
+        select * from users where name = #{username} and Password = #{password}
+    </select>
+
+    <select id="finduser" parameterType="po.QueryUsersVo"
+            resultType="po.UsersCustom">
+        select * from users
+    </select>
+    
+    <update id="updatepsw" parameterType="java.lang.String">
+    	UPDATE users SET `Password` = #{2} WHERE `name` = #{0} and `Password` = #{1}
+    </update>
+
+	
+</mapper>
