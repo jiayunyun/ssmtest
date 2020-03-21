@@ -61,6 +61,7 @@ function Init(page,code,starttime,endtime,t_ip,t_num) {
                     '</ul>' +
                     '</li>';
             }
+            console.log(api.getCurrent());
             $("#currentpage").html(1);
             if(data.length != 0){
             	totalData = data[0].total;
@@ -85,7 +86,7 @@ function Init(page,code,starttime,endtime,t_ip,t_num) {
 						url: "../wence/search.action",
 				        type: "post",
 				        data: {
-				            page: page,
+				            page: api.getCurrent(),
 				            code: code,
 				            starttime: starttime,
 				            endtime: endtime,

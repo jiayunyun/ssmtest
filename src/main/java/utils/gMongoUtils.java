@@ -443,7 +443,7 @@ public class gMongoUtils
     	map.put("go_time", 20190215095856d);
     	map.put("log_time", 20190215095856d);
     	for(int i =0;i<20;i++) {
-    		//insert("wence",map);
+    		insert("wence",map);
     	}
     	List<DBObject> ailist = findAll("wence");
     	System.out.println(ailist.size());
