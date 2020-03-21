@@ -166,7 +166,13 @@ function goform() {
     Init(page,code,starttime,endtime,t_ip,t_num);
 }
 function exportexcel(){
-	
+    page = 1;
+    var code = $("#code").val();
+    var starttime = $("#starttime").val();
+    var endtime = $("#endtime").val();
+    var t_ip = $("#t_ip").val();
+    var t_num = $("#t_num").val();
+    location.href="../wence/exportexcel?page="+page+"&code="+code+"&starttime="+starttime+"&endtime="+endtime+"&t_ip="+t_ip+"&t_num="+t_num;
 }
 
 //js将后台传过来的json数据分组

@@ -18,12 +18,13 @@
     <!-- spring版本号 -->
       <spring.version>4.3.14.RELEASE</spring.version>
     <!-- mybatis版本号 -->
-    <mybatis.version>3.2.6</mybatis.version>
-    <maven.compiler.source>1.7</maven.compiler.source>
-    <maven.compiler.target>1.7</maven.compiler.target>
+      <mybatis.version>3.2.6</mybatis.version>
+      <maven.compiler.source>1.7</maven.compiler.source>
+      <maven.compiler.target>1.7</maven.compiler.target>
     <!-- log4j日志文件管理包版本 -->
-    <slf4j.version>1.7.7</slf4j.version>
-    <log4j.version>1.2.17</log4j.version>
+      <slf4j.version>1.7.7</slf4j.version>
+      <log4j.version>1.2.17</log4j.version>
+      <poi.version>4.1.2</poi.version>
   </properties>
 
   <dependencies>
@@ -193,8 +194,38 @@
           <version>2.4</version>
           <classifier>jdk15</classifier>
       </dependency>
-
-
+      <!-- 导出excel-->
+      <dependency>
+          <groupId>org.apache.poi</groupId>
+          <artifactId>poi</artifactId>
+          <version>${poi.version}</version>
+      </dependency>
+      <dependency>
+          <groupId>org.apache.poi</groupId>
+          <artifactId>poi-ooxml</artifactId>
+          <version>${poi.version}</version>
+      </dependency>
+      <dependency>
+          <groupId>org.apache.poi</groupId>
+          <artifactId>poi-ooxml-schemas</artifactId>
+          <version>${poi.version}</version>
+      </dependency>
+      <dependency>
+          <groupId>org.apache.poi</groupId>
+          <artifactId>poi-excelant</artifactId>
+          <version>${poi.version}</version>
+      </dependency>
+      <dependency>
+          <groupId>org.apache.poi</groupId>
+          <artifactId>poi-examples</artifactId>
+          <version>${poi.version}</version>
+      </dependency>
+      <dependency>
+          <groupId>org.apache.poi</groupId>
+          <artifactId>poi-scratchpad</artifactId>
+          <version>${poi.version}</version>
+      </dependency>
+      <!-- 导出excel end-->
   </dependencies>
 
   <build>
